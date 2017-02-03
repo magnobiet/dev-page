@@ -1,0 +1,188 @@
+::selection {
+	background: #b3d4fc;
+	text-shadow: none;
+}
+
+body {
+	font-family: 'Ubuntu Mono', monospace;
+	background: #fff;
+}
+
+hr {
+	height: 0;
+	box-sizing: content-box;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border: 0;
+	border-top: 1px solid #d0cdca;
+	border-color: #d0cdca;
+	width: 100%;
+}
+
+a,
+a:hover,
+a:focus {
+	outline: none;
+	text-decoration: none;
+	color: #fff;
+	display: block;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+
+.container {
+	padding: .5em;
+	overflow: hidden;
+}
+
+.window {
+	background: #442239;
+	color: #fff;
+	max-width: 722px;
+	height: 462px;
+	margin: 1em auto;
+	border-radius: 5px 5px 0 0;
+	box-shadow: 0 0 2em #333;
+}
+
+.window-header {
+	border-radius: 5px 5px 0 0;
+	height: 28px;
+	background: #59574f;
+	background: -webkit-linear-gradient(top, #59574f 0%, #3f3e3a 100%);
+	background: linear-gradient(to bottom, #59574f 0%, #3f3e3a 100%);
+}
+
+.window-header .window-title {
+	color: #dfdbd2;
+	font-size: 16px;
+	line-height: 28px;
+	padding-left: 1em;
+	text-transform: lowercase;
+	margin: 0;
+	padding: 0;
+}
+
+.window-title {
+	float: left;
+}
+
+.window-title:before {
+	float: left;
+	content: '/dev/';
+	margin-right: 2px;
+}
+
+.window-title span {
+	float: left;
+	display: inline-block;
+}
+
+.window-actions {
+	float: left;
+	padding: 5px 10px 5px 8px;
+}
+
+.button {
+	float: left;
+	border-radius: 100%;
+	width: 16px;
+	height: 16px;
+	background: #59574f;
+	background: -webkit-linear-gradient(top, #93928c 0%, #5e5d59 100%);
+	background: linear-gradient(to bottom, #93928c 0%, #5e5d59 100%);
+	border: 1px solid #3b3a36;
+	color: #3b3a36;
+}
+
+.button-close {
+	background: #59574f;
+	background: -webkit-linear-gradient(top, #f28463 0%, #de4f1d 100%);
+	background: linear-gradient(to bottom, #f28463 0%, #de4f1d 100%);
+}
+
+.window-content {
+	height: 433px;
+	max-height: 433px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	border: 1px solid #3F3E39;
+}
+
+.window-content::-webkit-scrollbar {
+	width: 3px;
+	height: 3px;
+}
+
+.window-content::-webkit-scrollbar-thumb {
+	background: #d0cdca;
+}
+
+.command {
+	font-family: 'Ubuntu Mono', monospace;
+	float: left;
+	width: 100%;
+	padding: .5em 0;
+}
+
+.command:before {
+	content: '$ ';
+}
+
+.command .cursor {
+	width: 9px;
+	height: 18px;
+	background: #fff;
+	display: inline-block;
+	-webkit-animation: blinker 1s linear infinite;
+	animation: blinker 1s linear infinite;
+	text-indent: -9999em;
+}
+
+.command-result {
+	width: 100%;
+	display: block;
+}
+
+.command-result-item {
+	float: left;
+	display: inline-block;
+}
+
+.command-result-item a {
+	padding: 0 .5em;
+}
+
+.command-result-item.active a,
+.command-result-item a:hover,
+.command-result-item a:focus {
+	background: #fff;
+	color: #442239;
+}
+
+@-webkit-keyframes blinker {
+	50% {
+		opacity: 0;
+	}
+}
+
+@keyframes blinker {
+	50% {
+		opacity: 0;
+	}
+}
