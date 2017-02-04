@@ -5,18 +5,8 @@
 
 body {
 	font-family: 'Ubuntu Mono', monospace;
-	background: #fff;
-}
-
-hr {
-	height: 0;
-	box-sizing: content-box;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	border: 0;
-	border-top: 1px solid #d0cdca;
-	border-color: #d0cdca;
-	width: 100%;
+	background: url(../images/wallpaper-leaf.jpg) repeat scroll center center #fff;
+	background-size: cover;
 }
 
 a,
@@ -51,7 +41,7 @@ ul {
 }
 
 .window {
-	background: #442239;
+	background: rgba(46, 10, 34, 0.85);
 	color: #fff;
 	max-width: 722px;
 	height: 462px;
