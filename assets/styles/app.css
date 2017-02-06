@@ -3,10 +3,33 @@
 	text-shadow: none;
 }
 
+a,
+p,
+ul,
+li,
+div,
+html,
+body,
+code,
+main,
+span,
+header,
+footer,
+button,
+section {
+	box-sizing: border-box;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
 body {
 	font-family: 'Ubuntu Mono', monospace;
-	background: url(../images/wallpaper-leaf.jpg) repeat scroll center center #fff;
-	background-size: cover;
+	background: url(../images/wallpaper-leaf.jpg) repeat scroll center bottom #fff;
 }
 
 a,
@@ -15,7 +38,7 @@ a:focus {
 	outline: none;
 	text-decoration: none;
 	color: #fff;
-	display: block;
+	display: inline-block;
 }
 
 ul {
@@ -74,7 +97,7 @@ ul {
 
 .window-title:before {
 	float: left;
-	content: '/dev/';
+	content: '~/dev/';
 	margin-right: 2px;
 }
 
@@ -91,19 +114,39 @@ ul {
 .button {
 	float: left;
 	border-radius: 100%;
-	width: 16px;
-	height: 16px;
-	background: #59574f;
+	width: 18px;
+	height: 18px;
+	background: #5e5d59;
 	background: -webkit-linear-gradient(top, #93928c 0%, #5e5d59 100%);
 	background: linear-gradient(to bottom, #93928c 0%, #5e5d59 100%);
 	border: 1px solid #3b3a36;
-	color: #3b3a36;
+	color: #3d3c37;
+	text-align: center;
+	cursor: pointer;
+	padding: 0;
+	display: inline-block;
+	outline: none;
+}
+
+.button:hover,
+.button:focus {
+	background: #969696;
+	background: -webkit-linear-gradient(top, #c7c7c7 0%, #969696 100%);
+	background: linear-gradient(to bottom, #c7c7c7 0%, #969696 100%);
+	color: #34322e;
 }
 
 .button-close {
-	background: #59574f;
+	background: #de4f1d;
 	background: -webkit-linear-gradient(top, #f28463 0%, #de4f1d 100%);
 	background: linear-gradient(to bottom, #f28463 0%, #de4f1d 100%);
+}
+
+.button-close:hover,
+.button-close:focus {
+	background: #df5220;
+	background: -webkit-linear-gradient(top, #f7ad98 0%, #df5220 100%);
+	background: linear-gradient(to bottom, #f7ad98 0%, #df5220 100%);
 }
 
 .window-content {
@@ -147,6 +190,8 @@ ul {
 .command-result {
 	width: 100%;
 	display: block;
+	margin: 0;
+	overflow: hidden;
 }
 
 .command-result-item {
@@ -156,6 +201,8 @@ ul {
 
 .command-result-item a {
 	padding: 0 .5em;
+	color: #6a9fcf;
+	font-weight: bold;
 }
 
 .command-result-item.active a,
